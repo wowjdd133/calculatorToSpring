@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+  <form action="/cal" method="get">
+    <input type="number" name="num1">
+    <input type="text" name="op" placeholder="+,-,/,*">
+    <input type="number" name="num2">
+    <button>submit</button>
+  </form>
+  <br>
+  <input type="number" id="num3">
+  <input type="text" id="op" placeholder="+,-,/,*">
+  <input type="number" id="num4">
+  <button onclick="send()">submit</button>
+  <script>
+    function send() {
+      let num3 = $('#num3').val();
+      let op = $("#op").val();
+      let num4 = $('#num4').val();
+      location.href = "cal1/" + num3 + "/" + op + "/" + num4;
+    }
+  </script>
+</body>
+</html>
